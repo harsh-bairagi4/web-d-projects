@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop-Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button id="next" type="submit" onclick="show()">Submit</button>
+      <div class="popup">
+        <img src="404-tick.png" alt="" />
+        <h1>Thank You!</h1>
+        <p>Your details has been successfully submitted. Thanks</p>
+        <button id="okbtn" type="button">OK</button>
+      </div>
+    </div>
+    <script>
+      let popUp = document.querySelector(".popup");
+      let okBtn = document.getElementById("okbtn");
+      let next = document.getElementById("next");
+
+      function show() {
+        popUp.classList.add("show");
+      }
+      okBtn.addEventListener("click", ()=>{
+        popUp.classList.remove("show");
+        next.innerHTML = "Thanks";
+        next.disabled = true;
+        // next.style.visibility = "hidden";
+        // next.style.display = "none";
+        // next.remove();
+      })
+      
+    </script>
+  </body>
+</html>

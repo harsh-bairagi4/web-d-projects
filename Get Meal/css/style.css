@@ -1,0 +1,223 @@
+/* First thing to do is CSS reset */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Second thing to do is making variable */
+:root {
+    --navbar-height: 59px;
+}
+
+/* Now lets style navigation bar */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+margin: 3px;
+}
+
+#logo img {
+    width: 130px;
+    height: 60px;
+   
+    }
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai 2', sans-serif;
+
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 1px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+   
+}
+
+#navbar ul li a:hover{
+    color: black;
+  background-color: #dd7973;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+   
+    justify-content: center;
+   align-items: center;
+   height: 560px;
+
+}
+#home::before{
+    content: "";
+    background: url('../img/bg.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#home h1{
+    color: black;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+#home p{
+    color: black;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 32px;
+    margin: 2px 40px;
+    border-radius: 28px;
+    background:  #f5f1f1;
+}
+
+#services .box img{
+height: 150px;
+margin: auto;
+display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+}
+
+/* Clients Section */
+#client-section{
+    height: 400px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../img/yesahihai.jpg')no-repeat center center/cover;
+    width: 100%;
+    height: 54%;
+    z-index: -1;
+    opacity:0.4;
+}
+#clients{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#clients img{
+   height: 120px;
+}
+/* Contact Section */
+
+#contact{
+    margin-top: -50px;
+    position: relative;
+}
+
+#contact::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    background: url("/img/pexels-photo-952486.jpeg") no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    border-color: white;
+    font-size: 1rem;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Footer */
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-size: 2.7rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-secondary{
+    font-size: 1.7rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgb(177, 24, 24);
+    margin: 15px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+

@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(29, 28, 28);
+}
+.container{
+    width: 500px;
+    min-height: 300px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 30px 35px;
+}
+.container p{
+    font-weight: 800;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: 0;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.container button{
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background-color: rgb(61, 61, 248);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+#qrbox{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+#qrbox img{
+    width: 100%;
+    padding: 10px;
+}
+#qrbox.show-img{
+    max-height: 300px;
+    border: 1px solid #d1d1d1;
+    margin: 20px auto 2px; 
+}
+.error{
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
